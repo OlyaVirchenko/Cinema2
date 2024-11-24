@@ -5,7 +5,7 @@
 - Laravel Framework 10.48.4
 
 # План по разворачиванию проекта:
-1. Сделать клонирование проекта `git clone https://github.com/AnnaBruzgalova/diplom-cinema.git`
+1. Сделать клонирование проекта `git clone https://github.com/OlyaVirchenko/Cinema2.git`
 2. Открыть проект в IDE
 3. Выполнить в терминале команду для установки зависимостей `npm install`
 4. Выполнить в терминале команду для установки зависимостей `composer install`

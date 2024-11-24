@@ -1,15 +1,15 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ИдёмВКино</title>
-    <!-- <meta name="csrf-token" content="{{ csrf_token() }}"> -->
+     <meta name="csrf-token" content="{{ csrf_token() }}"> 
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">    
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="/css/normalize.css">
+     Styles -->
+    <!-- <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 
@@ -58,5 +58,5 @@
     </section>   
 </main>
 
-</body>
-</html>
+</body> -->
+<!-- </html> -->

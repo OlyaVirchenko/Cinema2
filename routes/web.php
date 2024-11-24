@@ -28,8 +28,8 @@ Route::prefix('admin')->group(function () {
     Route::get('login', [LoginController::class, 'form'])->name('login');
     Route::post('login', [LoginController::class, 'authenticate']);
     
-    Route::get('register', [RegisterController::class, 'adminRegister'])->name('admin-register'); 
-    Route::get('/auth/app-register', [RegisterController::class, 'registerGet'])->name('register');
+     Route::get('register', [RegisterController::class, 'adminRegister'])->name('admin-register'); 
+     Route::get('/auth/app-register', [RegisterController::class, 'registerGet'])->name('register');
 
     Route::group(['middleware'=>'auth'], function() {
         Route::get('index', [AdminController::class, 'index'])->name('index');
@@ -59,7 +59,7 @@ Route::prefix('client')->group(function () {
 
 Route::name('user.')->group(function () {
     
-    //Route::get('/admin_main', [TodoController::class, 'showAdminMain'])->middleware('auth')->name('private');
+    Route::get('/admin_main', [TodoController::class, 'showAdminMain'])->middleware('auth')->name('private');
 
     Route::get('/auth/app-login', [LoginController::class, 'loginGet'])->name('login');
     Route::post('/auth/app-login', [LoginController::class, 'login']);  
