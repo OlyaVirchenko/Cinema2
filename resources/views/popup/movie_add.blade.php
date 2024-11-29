@@ -14,7 +14,7 @@
           
           <label class="conf-step__label conf-step__label-fullsize" for="name">
             Название фильма
-            <input class="conf-step__input" id="movie-name" type="text" placeholder="Например, &laquo;Гражданин Кейн&raquo;" name="name" required>
+            <input class="conf-step__input" id="movie-name" type="text" placeholder="Например, &laquo;Холодное сердце&raquo;" name="name" required>
           </label>
           
           <label class="conf-step__label conf-step__label-fullsize" for="duration">
@@ -35,6 +35,8 @@
           <div class="alert"></div>
           <div class="conf-step__buttons text-center">
             <input type="submit" value="Добавить фильм" class="conf-step__button conf-step__button-accent">
+            <input type="submit" value="Загрузить постер" class="conf-step__button conf-step__button-accent add-poster">
+
             <button class="abort conf-step__button conf-step__button-regular">Отменить</button>            
           </div>
         </form>

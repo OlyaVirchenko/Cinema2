@@ -203,9 +203,23 @@
       <header class="conf-step__header conf-step__header_opened">
         <h2 class="conf-step__title">Открыть продажи</h2>
       </header>
+
+      <div class="conf-step__wrapper">
+            <p class="conf-step__paragraph">Выберите зал для конфигурации:</p>
+
+            <ul class="conf-step__selectors-box">
+              @foreach ($halls as $hall)
+                <li>
+                  <input type="radio" class="conf-step__radio" name="chairs-hall1" value="{{ $hall->id }}" {{ $loop->first ? 'checked' : '' }}>
+                  <span class="conf-step__selector">{{ $hall->name }}</span>
+                </li>
+              @endforeach
+            </ul>     
+
       <div class="conf-step__wrapper text-center">
         <p class="conf-step__paragraph">Всё готово, теперь можно:</p>
         <button class="conf-step__button conf-step__button-accent" id="open_sales">Открыть продажу билетов</button>
+      </div>
       </div>
     </section>    
 

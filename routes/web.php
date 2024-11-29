@@ -28,8 +28,8 @@ Route::prefix('admin')->group(function () {
     Route::get('login', [LoginController::class, 'form'])->name('login');
     Route::post('login', [LoginController::class, 'authenticate']);
     
-     Route::get('register', [RegisterController::class, 'adminRegister'])->name('admin-register'); 
-     Route::get('/auth/app-register', [RegisterController::class, 'registerGet'])->name('register');
+    Route::get('register', [RegisterController::class, 'adminRegister'])->name('admin-register'); 
+   //Route::get('/auth/app-register', [RegisterController::class, 'registerGet'])->name('register');
 
     Route::group(['middleware'=>'auth'], function() {
         Route::get('index', [AdminController::class, 'index'])->name('index');
@@ -45,7 +45,7 @@ Route::prefix('admin')->group(function () {
 
         Route::post('halls/{id}', [HallController::class, 'update'])->name('halls-update');                
         Route::post('seats/{id}', [HallController::class, 'updateSeats'])->name('seats-update');        
-        //Route::post('seance', function () {return view('welcome');});        
+        Route::post('seance', function () {return view('welcome');});        
         
     });
 });
@@ -57,16 +57,16 @@ Route::prefix('client')->group(function () {
     Route::get('ticket/{id}', [ClientController::class, 'ticket']);
 });
 
-Route::name('user.')->group(function () {
+Route::name('user.x')->group(function () {
     
-    Route::get('/admin_main', [TodoController::class, 'showAdminMain'])->middleware('auth')->name('private');
+   //Route::get('/admin_main', [TodoController::class, 'showAdminMain'])->middleware('auth')->name('private');
 
     Route::get('/auth/app-login', [LoginController::class, 'loginGet'])->name('login');
     Route::post('/auth/app-login', [LoginController::class, 'login']);  
-    Route::post('/auth/register/changePass/{email}', [RegisterController::class, 'updatePassword'])->name('update-password');
+    //Route::post('/auth/register/changePass/{email}', [RegisterController::class, 'updatePassword'])->name('update-password');
     Route::get('/auth/logout', [LoginController::class, 'logout'])->name('logout');
-    Route::get('/auth/app-register', [RegisterController::class, 'registerGet'])->name('register');
-    Route::post('/auth/app-register', [RegisterController::class, 'register']); 
+    //Route::get('/auth/app-register', [RegisterController::class, 'registerGet'])->name('register');
+    //Route::post('/auth/app-register', [RegisterController::class, 'register']); 
 });
 
 Route::get('/login', [LoginController::class, 'adminLogin'])->name('admin-login'); 
