@@ -203,6 +203,8 @@ cancel.forEach(item => {
 
 
 //--- Добавление фильма
+
+
 const wrapperMovies = document.querySelector(".conf-step__movies");
 let addMovie = "";
 
@@ -220,8 +222,12 @@ for (let i = 0; i < moviesData.length; i++) {
     `;
 }
 
-//--- Кнопка добавления постера
 
+//<img class="conf-step__movie-poster" alt="poster" src="/i/poster.png">
+//==========================================================================================
+
+//--- Кнопка добавления постера
+//let posterFile = "";
 const buttonPoster =document.querySelector('.add-poster');
               const input = document.createElement('input');
               input.type = 'file';
@@ -251,7 +257,7 @@ const buttonPoster =document.querySelector('.add-poster');
                       poster.style.width = '150px';
                       poster.style.height = '150px';
                       poster.style.backgroundImage = `url(${content})`;
-                      //posterFile = content; // Записываем содержимое файла в переменную ()
+                      let posterFile = content; // Записываем содержимое файла в переменную ()
                     }
                   }
                   }
